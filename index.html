@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="generator" content="Sud Studs Detailing">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sud Studs Detailing</title>
+  <script type="module">
+window.onerror = (message, source, lineno, colno, errorObj) => {
+window.parent.postMessage({
+  type: 'horizons-runtime-error',
+  message,
+  source,
+  lineno,
+  colno,
+  error: errorObj && errorObj.stack
+}, '*');
+};
+</script>
+  <script type="module">
+const observer = new MutationObserver((mutations) => {
+for (const mutation of mutations) {
+  for (const addedNode of mutation.addedNodes) {
+    if (
+      addedNode.nodeType === Node.ELEMENT_NODE &&
+      (
+        addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
+        addedNode.classList?.contains('backdrop')
+      )
+    ) {
+      handleViteOverlay(addedNode);
+    }
+  }
+}
+});
+
+observer.observe(document.documentElement, {
+childList: true,
+subtree: true
+});
+
+function handleViteOverlay(node) {
+if (!node.shadowRoot) {
+  return;
+}
+
+const backdrop = node.shadowRoot.querySelector('.backdrop');
+
+if (backdrop) {
+  const overlayHtml = backdrop.outerHTML;
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(overlayHtml, 'text/html');
+  const messageBodyElement = doc.querySelector('.message-body');
+  const fileElement = doc.querySelector('.file');
+  const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
+  const fileText = fileElement ? fileElement.textContent.trim() : '';
+  const error = messageText + (fileText ? ' File:' + fileText : '');
+
+  window.parent.postMessage({
+    type: 'horizons-vite-error',
+    error,
+  }, '*');
+}
+}
+</script>
+  <script type="module">
+const originalConsoleError = console.error;
+console.error = function(...args) {
+originalConsoleError.apply(console, args);
+
+const errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ').toLowerCase();
+
+window.parent.postMessage({
+  type: 'horizons-console-error',
+  error: errorString
+}, '*');
+};
+</script>
+  <script type="module">
+const originalFetch = window.fetch;
+
+window.fetch = async function(...args) {
+return originalFetch.apply(this, args)
+  .then(async response => {
+    if(!response.ok) {
+      const errorFromRes = await response.text();
+      console.error(errorFromRes);
+    }
+
+    return response;
+  })
+  .catch(error => {
+    console.error(error);
+
+  throw error;
+});
+};
+</script>
+<style type="text/css" data-vite-dev-id="/home/u309133285/websites/LhFWPRun1/public_html/src/index.css">*, ::before, ::after {
+--tw-border-spacing-x: 0;
+--tw-border-spacing-y: 0;
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+--tw-pan-x:  ;
+--tw-pan-y:  ;
+--tw-pinch-zoom:  ;
+--tw-scroll-snap-strictness: proximity;
+--tw-gradient-from-position:  ;
+--tw-gradient-via-position:  ;
+--tw-gradient-to-position:  ;
+--tw-ordinal:  ;
+--tw-slashed-zero:  ;
+--tw-numeric-figure:  ;
+--tw-numeric-spacing:  ;
+--tw-numeric-fraction:  ;
+--tw-ring-inset:  ;
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgb(59 130 246 / 0.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+--tw-shadow: 0 0 #0000;
+--tw-shadow-colored: 0 0 #0000;
+--tw-blur:  ;
+--tw-brightness:  ;
+--tw-contrast:  ;
+--tw-grayscale:  ;
+--tw-hue-rotate:  ;
+--tw-invert:  ;
+--tw-saturate:  ;
+--tw-sepia:  ;
+--tw-drop-shadow:  ;
+--tw-backdrop-blur:  ;
+--tw-backdrop-brightness:  ;
+--tw-backdrop-contrast:  ;
+--tw-backdrop-grayscale:  ;
+--tw-backdrop-hue-rotate:  ;
+--tw-backdrop-invert:  ;
+--tw-backdrop-opacity:  ;
+--tw-backdrop-saturate:  ;
+--tw-backdrop-sepia:  ;
+--tw-contain-size:  ;
+--tw-contain-layout:  ;
+--tw-contain-paint:  ;
+--tw-contain-style:  ;
+}
+
+::backdrop {
+--tw-border-spacing-x: 0;
+--tw-border-spacing-y: 0;
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+--tw-pan-x:  ;
+--tw-pan-y:  ;
+--tw-pinch-zoom:  ;
+--tw-scroll-snap-strictness: proximity;
+--tw-gradient-from-position:  ;
+--tw-gradient-via-position:  ;
+--tw-gradient-to-position:  ;
+--tw-ordinal:  ;
+--tw-slashed-zero:  ;
+--tw-numeric-figure:  ;
+--tw-numeric-spacing:  ;
+--tw-numeric-fraction:  ;
+--tw-ring-inset:  ;
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgb(59 130 246 / 0.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+--tw-shadow: 0 0 #0000;
+--tw-shadow-colored: 0 0 #0000;
+--tw-blur:  ;
+--tw-brightness:  ;
+--tw-contrast:  ;
+--tw-grayscale:  ;
+--tw-hue-rotate:  ;
+--tw-invert:  ;
+--tw-saturate:  ;
+--tw-sepia:  ;
+--tw-drop-shadow:  ;
+--tw-backdrop-blur:  ;
+--tw-backdrop-brightness:  ;
+--tw-backdrop-contrast:  ;
+--tw-backdrop-grayscale:  ;
+--tw-backdrop-hue-rotate:  ;
+--tw-backdrop-invert:  ;
+--tw-backdrop-opacity:  ;
+--tw-backdrop-saturate:  ;
+--tw-backdrop-sepia:  ;
+--tw-contain-size:  ;
+--tw-contain-layout:  ;
+--tw-contain-paint:  ;
+--tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+box-sizing: border-box; /* 1 */
+border-width: 0; /* 2 */
+border-style: solid; /* 2 */
+border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+--tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+line-height: 1.5; /* 1 */
+-webkit-text-size-adjust: 100%; /* 2 */
+-moz-tab-size: 4; /* 3 */
+-o-tab-size: 4;
+   tab-size: 4; /* 3 */
+font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+font-feature-settings: normal; /* 5 */
+font-variation-settings: normal; /* 6 */
+-webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+margin: 0; /* 1 */
+line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+height: 0; /* 1 */
+color: inherit; /* 2 */
+border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+-webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-size: inherit;
+font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+color: inherit;
+text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+font-feature-settings: normal; /* 2 */
+font-variation-settings: normal; /* 3 */
+font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+
+sub {
+bottom: -0.25em;
+}
+
+sup {
+top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+text-indent: 0; /* 1 */
+border-color: inherit; /* 2 */
+border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+font-family: inherit; /* 1 */
+font-feature-settings: inherit; /* 1 */
+font-variation-settings: inherit; /* 1 */
+font-size: 100%; /* 1 */
+font-weight: inherit; /* 1 */
+line-height: inherit; /* 1 */
+letter-spacing: inherit; /* 1 */
+color: inherit; /* 1 */
+margin: 0; /* 2 */
+padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+-webkit-appearance: button; /* 1 */
+background-color: transparent; /* 2 */
+background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+-webkit-appearance: textfield; /* 1 */
+outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+-webkit-appearance: button; /* 1 */
+font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+margin: 0;
+}
+
+fieldset {
+margin: 0;
+padding: 0;
+}
+
+legend {
+padding: 0;
+}
+
+ol,
+ul,
+menu {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+opacity: 1; /* 1 */
+color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+opacity: 1; /* 1 */
+color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+ This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+display: block; /* 1 */
+vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+max-width: 100%;
+height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+display: none;
+}
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+
+  --radius: 0.5rem;
+}
+* {
+border-color: hsl(var(--border));
+}
+body {
+background-color: hsl(var(--background));
+color: hsl(var(--foreground));
+}
+.container {
+width: 100%;
+margin-right: auto;
+margin-left: auto;
+padding-right: 2rem;
+padding-left: 2rem;
+}
+@media (min-width: 1400px) {
+
+.container {
+  max-width: 1400px;
+}
+}
+.pointer-events-auto {
+pointer-events: auto;
+}
+.fixed {
+position: fixed;
+}
+.absolute {
+position: absolute;
+}
+.relative {
+position: relative;
+}
+.sticky {
+position: sticky;
+}
+.inset-0 {
+inset: 0px;
+}
+.-right-2 {
+right: -0.5rem;
+}
+.bottom-0 {
+bottom: 0px;
+}
+.right-2 {
+right: 0.5rem;
+}
+.top-0 {
+top: 0px;
+}
+.top-2 {
+top: 0.5rem;
+}
+.z-50 {
+z-index: 50;
+}
+.z-\[100\] {
+z-index: 100;
+}
+.mx-auto {
+margin-left: auto;
+margin-right: auto;
+}
+.mb-12 {
+margin-bottom: 3rem;
+}
+.mb-16 {
+margin-bottom: 4rem;
+}
+.mb-2 {
+margin-bottom: 0.5rem;
+}
+.mb-4 {
+margin-bottom: 1rem;
+}
+.mb-6 {
+margin-bottom: 1.5rem;
+}
+.mb-8 {
+margin-bottom: 2rem;
+}
+.mt-4 {
+margin-top: 1rem;
+}
+.mt-6 {
+margin-top: 1.5rem;
+}
+.mt-8 {
+margin-top: 2rem;
+}
+.block {
+display: block;
+}
+.flex {
+display: flex;
+}
+.inline-flex {
+display: inline-flex;
+}
+.grid {
+display: grid;
+}
+.hidden {
+display: none;
+}
+.aspect-video {
+aspect-ratio: 16 / 9;
+}
+.h-10 {
+height: 2.5rem;
+}
+.h-11 {
+height: 2.75rem;
+}
+.h-16 {
+height: 4rem;
+}
+.h-24 {
+height: 6rem;
+}
+.h-4 {
+height: 1rem;
+}
+.h-5 {
+height: 1.25rem;
+}
+.h-8 {
+height: 2rem;
+}
+.h-9 {
+height: 2.25rem;
+}
+.h-\[600px\] {
+height: 600px;
+}
+.h-full {
+height: 100%;
+}
+.max-h-screen {
+max-height: 100vh;
+}
+.min-h-\[80vh\] {
+min-height: 80vh;
+}
+.min-h-screen {
+min-height: 100vh;
+}
+.w-10 {
+width: 2.5rem;
+}
+.w-24 {
+width: 6rem;
+}
+.w-4 {
+width: 1rem;
+}
+.w-5 {
+width: 1.25rem;
+}
+.w-8 {
+width: 2rem;
+}
+.w-auto {
+width: auto;
+}
+.w-full {
+width: 100%;
+}
+.max-w-2xl {
+max-width: 42rem;
+}
+.max-w-4xl {
+max-width: 56rem;
+}
+.max-w-\[80\%\] {
+max-width: 80%;
+}
+.flex-1 {
+flex: 1 1 0%;
+}
+.flex-shrink-0 {
+flex-shrink: 0;
+}
+.shrink-0 {
+flex-shrink: 0;
+}
+.grid-cols-1 {
+grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-row-reverse {
+flex-direction: row-reverse;
+}
+.flex-col {
+flex-direction: column;
+}
+.flex-col-reverse {
+flex-direction: column-reverse;
+}
+.items-start {
+align-items: flex-start;
+}
+.items-center {
+align-items: center;
+}
+.justify-center {
+justify-content: center;
+}
+.justify-between {
+justify-content: space-between;
+}
+.gap-1 {
+gap: 0.25rem;
+}
+.gap-12 {
+gap: 3rem;
+}
+.gap-3 {
+gap: 0.75rem;
+}
+.gap-4 {
+gap: 1rem;
+}
+.gap-6 {
+gap: 1.5rem;
+}
+.gap-8 {
+gap: 2rem;
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+--tw-space-x-reverse: 0;
+margin-right: calc(1rem * var(--tw-space-x-reverse));
+margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+--tw-space-y-reverse: 0;
+margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.overflow-hidden {
+overflow: hidden;
+}
+.rounded-full {
+border-radius: 9999px;
+}
+.rounded-lg {
+border-radius: var(--radius);
+}
+.rounded-md {
+border-radius: calc(var(--radius) - 2px);
+}
+.rounded-xl {
+border-radius: 0.75rem;
+}
+.border {
+border-width: 1px;
+}
+.border-destructive {
+border-color: hsl(var(--destructive));
+}
+.border-input {
+border-color: hsl(var(--input));
+}
+.bg-\[\#004E92\] {
+--tw-bg-opacity: 1;
+background-color: rgb(0 78 146 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#54d219\] {
+--tw-bg-opacity: 1;
+background-color: rgb(84 210 25 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#FF6600\] {
+--tw-bg-opacity: 1;
+background-color: rgb(255 102 0 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#e9f6f9\] {
+--tw-bg-opacity: 1;
+background-color: rgb(233 246 249 / var(--tw-bg-opacity, 1));
+}
+.bg-background {
+background-color: hsl(var(--background));
+}
+.bg-black\/50 {
+background-color: rgb(0 0 0 / 0.5);
+}
+.bg-blue-100 {
+--tw-bg-opacity: 1;
+background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
+}
+.bg-blue-50 {
+--tw-bg-opacity: 1;
+background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1));
+}
+.bg-destructive {
+background-color: hsl(var(--destructive));
+}
+.bg-gray-50 {
+--tw-bg-opacity: 1;
+background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+.bg-green-100 {
+--tw-bg-opacity: 1;
+background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
+}
+.bg-green-50 {
+--tw-bg-opacity: 1;
+background-color: rgb(240 253 244 / var(--tw-bg-opacity, 1));
+}
+.bg-primary {
+background-color: hsl(var(--primary));
+}
+.bg-secondary {
+background-color: hsl(var(--secondary));
+}
+.bg-transparent {
+background-color: transparent;
+}
+.bg-white {
+--tw-bg-opacity: 1;
+background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.object-contain {
+-o-object-fit: contain;
+   object-fit: contain;
+}
+.object-cover {
+-o-object-fit: cover;
+   object-fit: cover;
+}
+.p-1 {
+padding: 0.25rem;
+}
+.p-4 {
+padding: 1rem;
+}
+.p-6 {
+padding: 1.5rem;
+}
+.p-8 {
+padding: 2rem;
+}
+.px-3 {
+padding-left: 0.75rem;
+padding-right: 0.75rem;
+}
+.px-4 {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+.px-8 {
+padding-left: 2rem;
+padding-right: 2rem;
+}
+.py-2 {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.py-20 {
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+.py-3 {
+padding-top: 0.75rem;
+padding-bottom: 0.75rem;
+}
+.py-4 {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+.py-6 {
+padding-top: 1.5rem;
+padding-bottom: 1.5rem;
+}
+.py-8 {
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+.pr-8 {
+padding-right: 2rem;
+}
+.text-center {
+text-align: center;
+}
+.text-2xl {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+.text-3xl {
+font-size: 1.875rem;
+line-height: 2.25rem;
+}
+.text-4xl {
+font-size: 2.25rem;
+line-height: 2.5rem;
+}
+.text-lg {
+font-size: 1.125rem;
+line-height: 1.75rem;
+}
+.text-sm {
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+.text-xl {
+font-size: 1.25rem;
+line-height: 1.75rem;
+}
+.font-bold {
+font-weight: 700;
+}
+.font-medium {
+font-weight: 500;
+}
+.font-semibold {
+font-weight: 600;
+}
+.leading-relaxed {
+line-height: 1.625;
+}
+.text-\[\#004E92\] {
+--tw-text-opacity: 1;
+color: rgb(0 78 146 / var(--tw-text-opacity, 1));
+}
+.text-\[\#00d5ff\] {
+--tw-text-opacity: 1;
+color: rgb(0 213 255 / var(--tw-text-opacity, 1));
+}
+.text-\[\#FF6600\] {
+--tw-text-opacity: 1;
+color: rgb(255 102 0 / var(--tw-text-opacity, 1));
+}
+.text-blue-600 {
+--tw-text-opacity: 1;
+color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+.text-destructive-foreground {
+color: hsl(var(--destructive-foreground));
+}
+.text-foreground\/50 {
+color: hsl(var(--foreground) / 0.5);
+}
+.text-gray-600 {
+--tw-text-opacity: 1;
+color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.text-gray-700 {
+--tw-text-opacity: 1;
+color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+.text-gray-800 {
+--tw-text-opacity: 1;
+color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+.text-gray-900 {
+--tw-text-opacity: 1;
+color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+.text-green-500 {
+--tw-text-opacity: 1;
+color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+.text-green-600 {
+--tw-text-opacity: 1;
+color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+.text-primary {
+color: hsl(var(--primary));
+}
+.text-primary-foreground {
+color: hsl(var(--primary-foreground));
+}
+.text-secondary-foreground {
+color: hsl(var(--secondary-foreground));
+}
+.text-white {
+--tw-text-opacity: 1;
+color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.underline-offset-4 {
+text-underline-offset: 4px;
+}
+.opacity-0 {
+opacity: 0;
+}
+.opacity-90 {
+opacity: 0.9;
+}
+.shadow-lg {
+--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-md {
+--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline {
+outline-style: solid;
+}
+.ring-offset-background {
+--tw-ring-offset-color: hsl(var(--background));
+}
+.brightness-0 {
+--tw-brightness: brightness(0);
+filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.invert {
+--tw-invert: invert(100%);
+filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter {
+filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition {
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-all {
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-colors {
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-opacity {
+transition-property: opacity;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-shadow {
+transition-property: box-shadow;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+@keyframes enter {
+
+from {
+  opacity: var(--tw-enter-opacity, 1);
+  transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+}
+}
+@keyframes exit {
+
+to {
+  opacity: var(--tw-exit-opacity, 1);
+  transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+}
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+.hover\:bg-\[\#003a6f\]:hover {
+--tw-bg-opacity: 1;
+background-color: rgb(0 58 111 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#45b015\]:hover {
+--tw-bg-opacity: 1;
+background-color: rgb(69 176 21 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#ff9900\]:hover {
+--tw-bg-opacity: 1;
+background-color: rgb(255 153 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-accent:hover {
+background-color: hsl(var(--accent));
+}
+
+.hover\:bg-destructive\/90:hover {
+background-color: hsl(var(--destructive) / 0.9);
+}
+
+.hover\:bg-primary\/90:hover {
+background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:bg-secondary:hover {
+background-color: hsl(var(--secondary));
+}
+
+.hover\:bg-secondary\/80:hover {
+background-color: hsl(var(--secondary) / 0.8);
+}
+
+.hover\:text-\[\#FF6600\]:hover {
+--tw-text-opacity: 1;
+color: rgb(255 102 0 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-accent-foreground:hover {
+color: hsl(var(--accent-foreground));
+}
+
+.hover\:text-foreground:hover {
+color: hsl(var(--foreground));
+}
+
+.hover\:underline:hover {
+text-decoration-line: underline;
+}
+
+.hover\:shadow-xl:hover {
+--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:border-transparent:focus {
+border-color: transparent;
+}
+
+.focus\:opacity-100:focus {
+opacity: 1;
+}
+
+.focus\:outline-none:focus {
+outline: 2px solid transparent;
+outline-offset: 2px;
+}
+
+.focus\:ring-2:focus {
+--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-\[\#004E92\]:focus {
+--tw-ring-opacity: 1;
+--tw-ring-color: rgb(0 78 146 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-ring:focus {
+--tw-ring-color: hsl(var(--ring));
+}
+
+.focus\:ring-offset-2:focus {
+--tw-ring-offset-width: 2px;
+}
+
+.focus-visible\:outline-none:focus-visible {
+outline: 2px solid transparent;
+outline-offset: 2px;
+}
+
+.focus-visible\:ring-2:focus-visible {
+--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-ring:focus-visible {
+--tw-ring-color: hsl(var(--ring));
+}
+
+.focus-visible\:ring-offset-2:focus-visible {
+--tw-ring-offset-width: 2px;
+}
+
+.disabled\:pointer-events-none:disabled {
+pointer-events: none;
+}
+
+.disabled\:opacity-50:disabled {
+opacity: 0.5;
+}
+
+.group:hover .group-hover\:opacity-100 {
+opacity: 1;
+}
+
+.group.destructive .group-\[\.destructive\]\:border-destructive\/30 {
+border-color: hsl(var(--destructive) / 0.3);
+}
+
+.group.destructive .group-\[\.destructive\]\:text-red-300 {
+--tw-text-opacity: 1;
+color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:border-destructive\/30:hover {
+border-color: hsl(var(--destructive) / 0.3);
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:bg-destructive:hover {
+background-color: hsl(var(--destructive));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:text-destructive-foreground:hover {
+color: hsl(var(--destructive-foreground));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:text-red-50:hover {
+--tw-text-opacity: 1;
+color: rgb(254 242 242 / var(--tw-text-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-destructive:focus {
+--tw-ring-color: hsl(var(--destructive));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-red-400:focus {
+--tw-ring-opacity: 1;
+--tw-ring-color: rgb(248 113 113 / var(--tw-ring-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-offset-red-600:focus {
+--tw-ring-offset-color: #dc2626;
+}
+
+.data-\[swipe\=cancel\]\:translate-x-0[data-swipe="cancel"] {
+--tw-translate-x: 0px;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=end\]\:translate-x-\[var\(--radix-toast-swipe-end-x\)\][data-swipe="end"] {
+--tw-translate-x: var(--radix-toast-swipe-end-x);
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=move\]\:translate-x-\[var\(--radix-toast-swipe-move-x\)\][data-swipe="move"] {
+--tw-translate-x: var(--radix-toast-swipe-move-x);
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=move\]\:transition-none[data-swipe="move"] {
+transition-property: none;
+}
+
+.data-\[state\=open\]\:animate-in[data-state="open"] {
+animation-name: enter;
+animation-duration: 150ms;
+--tw-enter-opacity: initial;
+--tw-enter-scale: initial;
+--tw-enter-rotate: initial;
+--tw-enter-translate-x: initial;
+--tw-enter-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:animate-out[data-state="closed"] {
+animation-name: exit;
+animation-duration: 150ms;
+--tw-exit-opacity: initial;
+--tw-exit-scale: initial;
+--tw-exit-rotate: initial;
+--tw-exit-translate-x: initial;
+--tw-exit-translate-y: initial;
+}
+
+.data-\[swipe\=end\]\:animate-out[data-swipe="end"] {
+animation-name: exit;
+animation-duration: 150ms;
+--tw-exit-opacity: initial;
+--tw-exit-scale: initial;
+--tw-exit-rotate: initial;
+--tw-exit-translate-x: initial;
+--tw-exit-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:fade-out-80[data-state="closed"] {
+--tw-exit-opacity: 0.8;
+}
+
+.data-\[state\=closed\]\:slide-out-to-right-full[data-state="closed"] {
+--tw-exit-translate-x: 100%;
+}
+
+.data-\[state\=open\]\:slide-in-from-top-full[data-state="open"] {
+--tw-enter-translate-y: -100%;
+}
+
+@media (min-width: 640px) {
+
+.sm\:bottom-0 {
+  bottom: 0px;
+}
+
+.sm\:right-0 {
+  right: 0px;
+}
+
+.sm\:top-auto {
+  top: auto;
+}
+
+.sm\:flex-col {
+  flex-direction: column;
+}
+
+.data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {
+  --tw-enter-translate-y: 100%;
+}
+}
+
+@media (min-width: 768px) {
+
+.md\:block {
+  display: block;
+}
+
+.md\:hidden {
+  display: none;
+}
+
+.md\:max-w-\[420px\] {
+  max-width: 420px;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.md\:p-12 {
+  padding: 3rem;
+}
+
+.md\:text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.md\:text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.md\:text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+}
+
+@media (min-width: 1024px) {
+
+.lg\:grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+}
+</style></head>
+<body>
+  <div id="root">
+    <div class="min-h-screen bg-gray-50">
+      <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/30e07020-23ff-4e7b-a79c-d472abb22d70/f44583394ca55685a26dd67b7bd8784e.png" alt="Sud Studs" class="h-16 w-auto">
+              <h1 class="text-2xl font-bold text-[#00d5ff] md:text-3xl">Sud Studs Detailing</h1>
+            </div>
+            <nav class="hidden md:block">
+              <ul class="flex items-center gap-8">
+                <li tabindex="0" style="transform: none;"><a href="#home" class="text-gray-700 hover:text-[#FF6600] transition-colors">Home</a></li>
+                  <li tabindex="0" style="transform: none;"><a href="#services" class="text-gray-700 hover:text-[#FF6600] transition-colors">Services</a></li>
+                    <li tabindex="0"><a href="#pricing" class="text-gray-700 hover:text-[#FF6600] transition-colors">Pricing</a></li>
+                    <li tabindex="0"><a href="#member" class="text-gray-700 hover:text-[#FF6600] transition-colors">Membership</a></li>
+                    <li tabindex="0"><a href="#about" class="text-gray-700 hover:text-[#FF6600] transition-colors">About Us</a></li>
+                    <li tabindex="0"><a href="#contact" class="text-gray-700 hover:text-[#FF6600] transition-colors">Contact</a></li>
+                  </ul>
+                  </nav>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line>
+                      <line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+                    </div>
+                  </div>
+                </header>
+                <section id="home" class="relative h-[600px] overflow-hidden">
+                  <div class="absolute inset-0">
+                    <img class="w-full h-full object-cover" alt="Luxury car being detailed" src="https://images.unsplash.com/photo-1622319102508-a1cdd3e69acd">
+                    <div class="absolute inset-0 bg-black/50">
+                    </div>
+                  </div>
+                  <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white" style="opacity: 1; transform: none;">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6">Experience Premium Car Care</h2>
+                    <p class="text-xl md:text-2xl mb-8 max-w-2xl">Your car deserves the best. At Sud Studs, we offer top-tier car wash and detailing services with exceptional care.</p>
+                    <div tabindex="0"><button class="inline-flex items-center justify-center font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md bg-[#FF6600] hover:bg-[#ff9900] text-white text-lg px-8 py-6">Discover Our Services</button>
+                    </div>
+                  </div>
+                </section>
+                <section id="services" class="py-20 bg-white">
+                  <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-center mb-16" style="opacity: 1; transform: none;">Our Services</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <div class="text-[#FF6600] mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                            <circle cx="7" cy="17" r="2"></circle>
+                            <path d="M9 17h6"></path>
+                            <circle cx="17" cy="17" r="2"></circle>
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Exterior Detailing</h3>
+                        <p class="text-gray-600">Get a sparkling clean car exterior with our efficient detailing process. Your vehicle will shine in no time!</p>
+                      </div>
+                      <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <div class="text-[#FF6600] mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                            <path d="M5 3v4"></path>
+                            <path d="M19 17v4"></path>
+                            <path d="M3 5h4"></path>
+                            <path d="M17 19h4"></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Interior Cleaning</h3>
+                        <p class="text-gray-600">We provide a thorough cleaning for your car's interior with a focus on detailing every corner.</p>
+                      </div>
+                      <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <div class="text-[#FF6600] mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+                            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Full Detailing</h3>
+                        <p class="text-gray-600">Comprehensive detailing service that covers both interior and exterior, giving your car a fresh look.</p>
+                      </div>
+                      <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <div class="text-[#FF6600] mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Paint Protection &amp; Waxing</h3>
+                        <p class="text-gray-600">Protect your vehicle's paint with our premium waxing services, leaving it looking like new and protected from the elements.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="pricing" class="py-20 bg-gray-50">
+                  <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-center mb-16" style="opacity: 1; transform: none;">Prices Starting At</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <h3 class="text-xl font-semibold mb-4 text-[#004E92]">Exterior Detailing</h3>
+                        <p class="text-3xl font-bold text-[#FF6600] mb-4">$50</p>
+                        <p class="text-gray-600">Exterior detail to remove dirt, grime, and other contaminants.</p>
+                      </div>
+                      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <h3 class="text-xl font-semibold mb-4 text-[#004E92]">Interior Cleaning</h3>
+                        <p class="text-3xl font-bold text-[#FF6600] mb-4">$60</p>
+                        <p class="text-gray-600">Thorough cleaning of your car's seats, floors, and dashboard.</p>
+                      </div>
+                      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <h3 class="text-xl font-semibold mb-4 text-[#004E92]">Full Detailing</h3>
+                        <p class="text-3xl font-bold text-[#FF6600] mb-4">$100</p>
+                        <p class="text-gray-600">A complete interior and exterior detailing with added care.</p>
+                      </div>
+                      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" style="opacity: 1; transform: none;">
+                        <h3 class="text-xl font-semibold mb-4 text-[#004E92]">Paint Protection &amp; Waxing</h3>
+                        <p class="text-3xl font-bold text-[#FF6600] mb-4">$140</p>
+                        <p class="text-gray-600">Enhance the shine of your vehicle and protect the paint for longer-lasting beauty.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="member" class="py-20 bg-[#e9f6f9]">
+                <div class="container mx-auto px-4">
+                  <h2 class="text-4xl font-bold text-center mb-16" style="opacity: 1; transform: none;">Membership</h2>
+                  <div class="bg-[#004E92] rounded-xl p-8 md:p-12 text-white">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6">Become a member today!</h3>
+                        <p class="text-lg mb-4">Sign up today for a full detailing up to two times every month</p>
+                        <p class="text-2xl font-bold text-[#FF6600] mb-8">Only $120 month-to-month with free cancellation at any time</p>
+                        <div tabindex="0">
+                          <a href="#contact"><button class="inline-flex items-center justify-center font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md bg-[#54d219] hover:bg-[#45b015] text-white text-lg px-8 py-6">Sign Up</button></a>
+                        </div>
+                      </div>
+                      <div class="relative aspect-video rounded-xl overflow-hidden shadow-xl">
+                        <video src="https://mail.google.com/mail/u/0?ui=2&amp;ik=9af2bdb6f3&amp;attid=0.1&amp;permmsgid=msg-a:r4513316597748693621&amp;th=1960929ccab918bb&amp;view=att&amp;disp=safe&amp;realattid=056E49C9-9C2F-46EC-B717-B8F4C2819556&amp;zw" controls="" class="w-full h-full object-cover" preload="metadata"></video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="about" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                  <h2 class="text-4xl font-bold text-center mb-16" style="opacity: 1; transform: none;">About Us</h2>
+                  <div class="max-w-4xl mx-auto text-center" style="opacity: 1; transform: none;">
+                    <p class="text-lg text-gray-700 leading-relaxed">This organization is founded by Lalithendra Reddy Bhima, Parker Lopez, Ethan Price, and Aiden Harris. Sud Studs Detailing is dedicated to providing exceptional service, utilizing top-of-the-line cleaning products, and ensuring your car receives a high-quality wash every time. With years of experience, we are trusted by car owners for our attention to detail and eco-friendly approach. We bring the car wash to you, so you don't have to waste time driving anywhere, making it the most convenient and hassle-free option compared to other services.</p>
+                  </div>
+                </div>
+              </section>
+              <section id="contact" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                  <h2 class="text-4xl font-bold text-center mb-8" style="opacity: 1; transform: none;">Contact Us</h2>
+                  <p class="text-center text-lg mb-12" style="opacity: 1; transform: none;">Have questions or want to schedule an appointment? Get in touch with us today by contacting us. Phone: 916-586-1124. Or, schedule an appointment.</p>
+                  <div class="max-w-2xl mx-auto" style="opacity: 1; transform: none;">
+                    <form class="bg-white rounded-xl shadow-lg p-8" action="https://script.google.com/macros/s/AKfycbz33NrhloKPzjLIBr7b3AUlIj7AFFgy9-8Gt0Jus2aAmoci5bVBcto0tvj8ta7ILNZfIw/exec" method="POST" autocomplete="on">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                          <input type="text" id="name" name="name" required="" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent" placeholder="Full Name">
+                        </div>
+                        <div>
+                          <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                          <input type="email" id="email" name="email" required="" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent" placeholder="Email">
+                        </div>
+                        <div>
+                          <label for="tel" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                          <input type="tel" id="tel" name="tel" required="" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent" placeholder="123-456-7890">
+                        </div>
+                        <div>
+                          <label for="date" class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                          <input type="date" id="date" name="date" required="" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent">
+                        </div>
+                        <div>
+                          <label for="time" class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+                          <input type="time" id="time" name="time" required="" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent">
+                        </div>
+                        <div>
+                          <label for="plan" class="block text-sm font-medium text-gray-700 mb-2">Select Plan</label>
+                          <input list="plan" name="plan" required="" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent">
+                          <datalist id="plan">
+                            <option value="Exterior Wash"></option>
+                            <option value="Interior Cleaning"></option>
+                            <option value="Full Detailing"></option>
+                            <option value="Paint Protection &amp; Waxing"></option>
+                            <option value="Membership"></option>
+                          </datalist>
+                        </div>
+                      </div>
+                      <div class="mt-6">
+                        <label for="text" class="block text-sm font-medium text-gray-700 mb-2">Additional Comments</label>
+                        <textarea id="text" name="text" rows="4" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#004E92] focus:border-transparent"></textarea>
+                      </div>
+                      <div class="mt-8" tabindex="0">
+                        <button class="inline-flex items-center justify-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 w-full bg-[#004E92] hover:bg-[#003a6f] text-white py-3 rounded-md text-lg font-semibold" type="submit">Confirm</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+              <footer class="bg-[#004E92] text-white py-8">
+                <div class="container mx-auto px-4">
+                  <div class="flex flex-col items-center gap-6">
+                    <p class="text-lg">© 2025 Sud Studs Detailing. All Rights Reserved.</p>
+                    <div class="flex items-center gap-4">
+                      <p class="text-lg">Follow us on</p>
+                      <div class="flex items-center gap-6">
+                        <a href="https://www.instagram.com/sudstuds_/?igsh=NTc4MTIwNjQ2YQ%3D%3D#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-8 h-8" tabindex="0"><img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/30e07020-23ff-4e7b-a79c-d472abb22d70/9c6a9356fbdf278f84ede521a3ded71a.png" alt="Instagram" class="w-8 h-8 object-contain filter brightness-0 invert"></a>
+                          <a href="https://www.facebook.com/people/SudStuds/61574044467663/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-8 h-8" tabindex="0"><img src="https://www.dontdrivedirty.com/wp-content/uploads/2021/08/Vector.svg" alt="Facebook" class="w-8 h-8 object-contain filter brightness-0 invert"></a>
+                          <a href="https://www.tiktok.com/@sudstuds_?_t=ZP-8v69cbeea7y&amp;_r=1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-8 h-8" tabindex="0"><img src="https://www.dontdrivedirty.com/wp-content/uploads/2024/09/logo-tiktok-svgrepo-com-1.svg" alt="TikTok" class="w-8 h-8 object-contain filter brightness-0 invert"></a>
+                          <a href="https://www.yelp.com/biz/sud-studs-folsom" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-8 h-8" tabindex="0"><img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/30e07020-23ff-4e7b-a79c-d472abb22d70/6a17f9a1662fd9e1d228584b9a2b2728.png" alt="Yelp" class="w-8 h-8 object-contain filter brightness-0 invert"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+                  <ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol>
+                </div>
+              </div>
+            </div>
+</body></html>
